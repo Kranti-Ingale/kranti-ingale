@@ -12,13 +12,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Consistent casing: show text as written, no ALL-CAPS */
+        .main-title h2,
+        .about-container .left-about h4,
+        .stat-title,
+        .timeline .timeline-item h5,
+        .timeline .timeline-item .tl-duration,
+        .contact-content-con .left-contact h4 { text-transform: none; }
         /* Scoped styles for the new Research section */
         .research-intro { max-width: 60rem; margin-bottom: 3rem; }
         .research-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
         .research-card { background-color: var(--color-grey-5); border-radius: 5px; padding: 2.5rem 2rem; transition: all .4s ease-in-out; }
         .research-card:hover { background-color: var(--color-primary); }
         .research-card .r-icon { font-size: 2.6rem; color: var(--color-secondary); margin-bottom: 1rem; }
-        .research-card h4 { font-size: 1.3rem; text-transform: uppercase; margin-bottom: .8rem; }
+        .research-card h4 { font-size: 1.3rem; margin-bottom: .8rem; }
         .research-card p { font-size: 1.1rem; line-height: 1.7; }
         .pub-list { list-style: none; }
         .pub-item { background-color: var(--color-grey-5); border-left: 4px solid var(--color-secondary); border-radius: 5px; padding: 1.8rem 2rem; margin-bottom: 1.6rem; }
@@ -188,6 +195,11 @@
 
             <h4 class="stat-title">Talks &amp; Workshops</h4>
             <ul class="info-list">
+                <li>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <strong>Teaching Assistant &mdash; INAE Summer Faculty Development Programme (FDP)</strong>
+                    <span class="info-meta">IIT Madras &middot; 12 &ndash; 18 June 2026</span>
+                </li>
                 <li>
                     <i class="fas fa-chalkboard-teacher"></i>
                     <strong>Workshop on High-Performance Computing</strong>
