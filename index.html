@@ -4,34 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Kranti Ingale | PhD Researcher, IIT Madras</title>
+    <meta name="description" content="Kranti Ingale — Ph.D. scholar at IIT Madras (PACE Lab) researching GPU memory systems, address translation, and TLB hierarchies. PMRF Fellow.">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Scoped styles for the new Research section */
+        .research-intro { max-width: 60rem; margin-bottom: 3rem; }
+        .research-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .research-card { background-color: var(--color-grey-5); border-radius: 5px; padding: 2.5rem 2rem; transition: all .4s ease-in-out; }
+        .research-card:hover { background-color: var(--color-primary); }
+        .research-card .r-icon { font-size: 2.6rem; color: var(--color-secondary); margin-bottom: 1rem; }
+        .research-card h4 { font-size: 1.8rem; margin-bottom: .8rem; }
+        .research-card p { font-size: 1.4rem; line-height: 1.7; }
+        .pub-list { list-style: none; }
+        .pub-item { background-color: var(--color-grey-5); border-left: 4px solid var(--color-secondary); border-radius: 5px; padding: 1.8rem 2rem; margin-bottom: 1.6rem; }
+        .pub-item h5 { font-size: 1.7rem; margin-bottom: .6rem; }
+        .pub-item .pub-venue { font-size: 1.4rem; color: var(--color-grey-1); }
+        .pub-badge { display: inline-block; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; padding: .3rem 1rem; border-radius: 20px; background-color: var(--color-secondary); color: var(--color-white); margin-left: .6rem; }
+        .edu-list { list-style: none; margin-top: 1rem; margin-bottom: 2.5rem; }
+        .edu-list li { font-size: 1.5rem; margin-bottom: 1.6rem; padding-left: 2.6rem; position: relative; }
+        .edu-list li i { position: absolute; left: 0; top: 4px; color: var(--color-secondary); font-size: 1.6rem; }
+        .edu-list li strong { display: block; }
+        .edu-list .edu-meta { display: block; font-size: 1.3rem; color: var(--color-grey-1); margin-top: .3rem; }
+        /* Education spans full width now that the stat boxes are gone */
+        .about-container { grid-template-columns: 1fr; }
+        /* Simple skill tags (no percentage bars) */
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.5rem; }
+        .skill-tags span { background-color: var(--color-grey-5); padding: .9rem 1.8rem; border-radius: 30px; font-size: 1.4rem; transition: all .3s ease-in-out; }
+        .skill-tags span:hover { background-color: var(--color-secondary); color: var(--color-white); }
+        .blogs a.blog { text-decoration: none; color: inherit; display: block; }
+        /* No hero photo: single-column, centered intro */
+        .header-content { grid-template-columns: 1fr; }
+        .header-content .right-header { padding: 0 8rem; max-width: 90rem; margin: 0 auto; }
+        @media screen and (max-width: 600px) { .header-content .right-header { padding: 0 2rem; } }
+    </style>
 </head>
 <body class="main-content">
     <header class="container header active" id="home">
         <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="img/hero.JPG" alt="">
-                </div>
-            </div>
             <div class="right-header">
                 <h1 class="name">
                     Hi, I'm <span>Kranti Ingale</span>
-                    Research Scholar.
+                    PhD Researcher.
                 </h1>
                 <p>
-                    I am a PhD scholar in the Department of Computer Science and Engineering at the Indian Institute of Technology Madras (IITM), working under the guidance of <a href ="http://www.cse.iitm.ac.in/~madhu/">Dr. Madhu Mutyam.</a> 
-                    I have received the prestigious Prime Minister's Research Fellowship (PMRF) offered by the Ministry of Human Resource Development (MHRD), Government of India.
-                    I am associated with the Programming Languages, Architecture, and Compilers Education <a href="http://pace.cse.iitm.ac.in/"> (PACE) lab </a>.
+                    I am a Ph.D. scholar in the Department of Computer Science and Engineering at the Indian Institute of Technology Madras (IITM), working under the guidance of <a href="http://www.cse.iitm.ac.in/~madhu/">Dr. Madhu Mutyam</a>.
+                    My research focuses on <strong>GPU memory systems</strong> — address translation and TLB hierarchies for high-throughput accelerators.
+                    I am a recipient of the prestigious <strong>Prime Minister's Research Fellowship (PMRF)</strong> from the Government of India, and I am associated with the Programming Languages, Architecture, and Compilers Education <a href="http://pace.cse.iitm.ac.in/">(PACE) lab</a>.
                 </p>
                 <div class="btn-con">
-                    <a href="IIT_Madras_Resume.pdf" class="main-btn">
+                    <a href="IIT_Madras_Resume.pdf" target="_blank" class="main-btn">
                         <span class="btn-text">Download CV</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
@@ -42,295 +68,164 @@
     <main>
         <section class="container about" id="about">
             <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+                <h2>About <span>me</span><span class="bg-text">About me</span></h2>
             </div>
             <div class="about-container">
                 <div class="left-about">
-                    <h4>Information About me</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Eveniet labore nihil obcaecati consequatur. Debitis error doloremque, 
-                        vero eos vel nemo eius voluptatem dicta tenetur modi. <br /> <br /> La musica
-                        delectus dolore fugiat exercitationem a, 
-                        ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Harum non necessitatibus deleniti eum soluta.
-                    </p>
-                    <div class="btn-con">
-                        <a href="#" class="main-btn">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="right-about">
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">650+</p>
-                            <p class="small-text">Projects <br /> Completed</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">10+</p>
-                            <p class="small-text">Years of <br /> experience</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">300+</p>
-                            <p class="small-text">Happy <br /> Clients</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">400+</p>
-                            <p class="small-text">Customer <br /> reviews</p>
-                        </div>
-                    </div>
+                    <h4>My Education</h4>
+                    <ul class="edu-list">
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <strong>Ph.D., Computer Science &amp; Engineering</strong>
+                            <span class="edu-meta">Indian Institute of Technology Madras &middot; 2022–Present &middot; CGPA 9.25</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <strong>M.Tech</strong>
+                            <span class="edu-meta">Indian Institute of Technology Kharagpur &middot; 2015–2017 &middot; CGPA 8.17</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <strong>B.E.</strong>
+                            <span class="edu-meta">Pune University &middot; 2011–2014 &middot; 72.93%</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <strong>Diploma</strong>
+                            <span class="edu-meta">Government Polytechnic &middot; 2008–2011 &middot; 84.07%</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
- 
-            
+
+
             <div class="about-stats">
-                <h4 class="stat-title">My Skills</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">Architectural Simulators</p>
-                        <div class="progress-con">
-                            <p class="prog-text">80%</p>
-                            <div class="progress">
-                                <span class="html"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">C</p>
-                        <div class="progress-con">
-                            <p class="prog-text">95%</p>
-                            <div class="progress">
-                                <span class="css"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">CPP</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="js"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">CUDA</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="react"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">NodeJS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">87%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Python</p>
-                        <div class="progress-con">
-                            <p class="prog-text">70%</p>
-                            <div class="progress">
-                                <span class="python"></span>
-                            </div>
-                        </div>
-                    </div>
+                <h4 class="stat-title">Technical Skills</h4>
+                <div class="skill-tags">
+                    <span>Computer &amp; GPU Architecture</span>
+                    <span>Architectural Simulators (MGPUSim, ChampSim)</span>
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>CUDA</span>
+                    <span>Python</span>
+                    <span>Java</span>
                 </div>
             </div>
-            <h4 class="stat-title">My Timeline</h4>
+            <h4 class="stat-title">Work Experience</h4>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="tl-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <p class="tl-duration">July 2022 - present</p>
-                    <h5>Research Scholar <span> - IIT Madras</span></h5>
-                    <p>
-                        Awarded the prestigious Prime Minister's Research Fellowship (PMRF) in Cycle 11.
-                        Recognized with the Star Teaching Assistant (TA) award for the academic year 2022-2023 for contributions to the course "Paradigms of Programming (CS3100).
-                        Achieved a position in the TOP 10 teams in the TOI Times Techies EMPOWER case competition by presenting innovative technology solutions to enhance workplace diversity in Feb 2024.
-                    </p>
+                    <h5>Ph.D. Research Scholar <span> - IIT Madras</span></h5>
                 </div>
                 <div class="timeline-item">
                     <div class="tl-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <p class="tl-duration">April 2022 - June 2022</p>
-                    <h5>Assistant Professor<span> - Vishwakarma University Pune - Maharashtra.</span></h5>
-                    <p> Taught Problem solving and programming (theory and lab) to 2nd year B Tech students </p>
+                    <h5>Assistant Professor<span> - Vishwakarma University, Pune, Maharashtra</span></h5>
                 </div>
                 <div class="timeline-item">
                     <div class="tl-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <p class="tl-duration">Sept 2018 - Sept 2021</p>
-                    <h5>Assistant Professor<span> - Government Engineering College, Ujjain - Madhya Pradesh </span></h5>
-                    <p> Provided training to Students of GEC Ujjain for COVID-friendly behavior and vaccination under the Yuva Shakti Corona Mukti Abhiyan initiative of the Government
-of Madhya Pradesh. Worked as a Core committee member of the Task Force for Academic Performance Improvement. </p>
+                    <h5>Assistant Professor<span> - Government Engineering College, Ujjain, Madhya Pradesh </span></h5>
                 </div>
                 <div class="timeline-item">
                     <div class="tl-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <p class="tl-duration">Jan 2018 - Aug 2018</p>
-                    <h5>Assistant Professor<span> - Birla Institute of Technology, Mesra, Ranchi - Jharkhand</span></h5>
-                    <p> Taught Data Structure & Algorithm(theory and lab) to 2nd year B Tech students. Prepared syllabus for different courses according to CBCS.</p>
+                    <h5>Assistant Professor<span> - Birla Institute of Technology, Mesra, Ranchi, Jharkhand</span></h5>
                 </div>
-                
-               
             </div>
         </section>
+
+        <section class="container" id="research">
+            <div class="main-title">
+                <h2>My <span>Research</span><span class="bg-text">Research</span></h2>
+            </div>
+            <p class="research-intro port-text">
+                My research investigates how to make <strong>address translation</strong> scale on massively parallel GPUs. Modern GPUs stress the TLB hierarchy with thousands of concurrent threads; I design coalesced, multi-level TLB structures and page-walk mechanisms that reduce translation overhead, and evaluate them on cycle-accurate simulators.
+            </p>
+            <div class="research-areas">
+                <div class="research-card">
+                    <div class="r-icon"><i class="fas fa-microchip"></i></div>
+                    <h4>GPU Address Translation</h4>
+                    <p>TLB hierarchies, coalescing, and page-walk optimization for high-throughput GPUs.</p>
+                </div>
+                <div class="research-card">
+                    <div class="r-icon"><i class="fas fa-memory"></i></div>
+                    <h4>Memory Systems &amp; Caching</h4>
+                    <p>Cache management, prefetching, and the memory hierarchy of CPUs and accelerators.</p>
+                </div>
+                <div class="research-card">
+                    <div class="r-icon"><i class="fas fa-cogs"></i></div>
+                    <h4>Architectural Simulation</h4>
+                    <p>Cycle-accurate modeling and evaluation with MGPUSim (AMD GCN3) and ChampSim.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="container" id="portfolio">
             <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+                <h2>My <span>Projects</span><span class="bg-text">My Work</span></h2>
             </div>
             <p class="port-text">
-                Here is some of my projects that I've done in various programming languages.
+                A selection of research and course projects in computer architecture, GPU programming, and systems.
             </p>
             <div class="portfolios">
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port1.jpg" alt="">
+                        <img src="img/port1.jpg" alt="PATCH GPU TLB project">
                     </div>
                     <div class="hover-items">
-                        <h3>GPUBooke</h3>
+                        <h3>PATCH — GPU TLB Hierarchy</h3>
                         <div class="icons">
-                            <a href="#" class="icon">
+                            <a href="https://github.com/Kranti-Ingale" target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port2.jpg" alt="">
+                        <img src="img/port2.jpg" alt="GPUBooker project">
                     </div>
                     <div class="hover-items">
-                        <h3>DataPulse</h3>
+                        <h3>GPUBooker — Parallel Room Booking</h3>
                         <div class="icons">
-                            <a href="#" class="icon">
+                            <a href="https://github.com/Kranti-Ingale" target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port3.jpg" alt="">
+                        <img src="img/port3.jpg" alt="DataPulse LLC prefetcher project">
                     </div>
-                    <div class="Dyslexia">
-                        <h3>Project Source</h3>
+                    <div class="hover-items">
+                        <h3>DataPulse — LLC Prefetcher (ChampSim)</h3>
                         <div class="icons">
-                            <a href="#" class="icon">
+                            <a href="https://github.com/Kranti-Ingale" target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port4.jpg" alt="">
+                        <img src="img/port4.jpg" alt="Dyslexia word highlighting project">
                     </div>
                     <div class="hover-items">
-                        <h3>Project Source</h3>
+                        <h3>Dyslexia Reading Aid (M.Tech, IIT KGP)</h3>
                         <div class="icons">
-                            <a href="#" class="icon">
+                            <a href="https://github.com/Kranti-Ingale" target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port5.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port2.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port7.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>
@@ -342,79 +237,43 @@ of Madhya Pradesh. Worked as a Core committee member of the Task Force for Acade
                 <div class="main-title">
                     <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
                 </div>
+                <p class="port-text">
+                    I write about GPU architecture, computer-systems research, and GATE preparation. Read my articles on Medium and watch my talks on YouTube.
+                </p>
+                <div class="btn-con" style="margin-bottom: 3rem;">
+                    <a href="https://medium.com/@kranti02ingale" target="_blank" class="main-btn">
+                        <span class="btn-text">Read on Medium</span>
+                        <span class="btn-icon"><i class="fab fa-medium-m"></i></span>
+                    </a>
+                </div>
                 <div class="blogs">
-                    <div class="blog">
-                        <img src="img/port6.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                How to Create Your Own Website
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
+                    <a href="https://medium.com/@kranti02ingale" target="_blank" class="blog">
                         <img src="img/blog1.jpg" alt="">
                         <div class="blog-text">
-                            <h4>
-                                How to Become an Expert in Web Design
-                            </h4>
+                            <h4>Articles on GPU &amp; Computer Architecture</h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                                Notes and explainers on GPU memory systems, address translation, and architecture research. Read the full collection on Medium.
                             </p>
                         </div>
-                    </div>
-                    <div class="blog">
+                    </a>
+                    <a href="https://www.youtube.com/@KrantiIngale02" target="_blank" class="blog">
                         <img src="img/blog2.jpg" alt="">
                         <div class="blog-text">
-                            <h4>
-                                Become a Web Designer in 10 Days
-                            </h4>
+                            <h4>Let's Crack the GATE — Talks</h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                                11+ keynote sessions on GATE preparation delivered across engineering colleges. Watch the recordings on my YouTube channel.
                             </p>
                         </div>
-                    </div>
-                    <div class="blog">
+                    </a>
+                    <a href="https://medium.com/@kranti02ingale" target="_blank" class="blog">
                         <img src="img/blog3.jpg" alt="">
                         <div class="blog-text">
-                            <h4>
-                                Debbuging made easy with Web Inspector
-                            </h4>
+                            <h4>Research &amp; PhD Life</h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                                Reflections on doing a PhD, working with simulators, and the research process. More posts coming soon.
                             </p>
                         </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port1.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Get started with Web Design and UI Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                This is what you need to know about Web Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -425,7 +284,7 @@ of Madhya Pradesh. Worked as a Core committee member of the Task Force for Acade
                 </div>
                 <div class="contact-content-con">
                     <div class="left-contact">
-                        <h4>Contact me here</h4>
+                        <h4>Get in touch</h4>
                        <div class="contact-info">
                             <div class="contact-item">
                                 <div class="icon">
@@ -433,7 +292,7 @@ of Madhya Pradesh. Worked as a Core committee member of the Task Force for Acade
                                     <span>Location</span>
                                 </div>
                                 <p>
-                                    : Chennai , Tamil Nadu
+                                    : Chennai, Tamil Nadu, India
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -442,16 +301,16 @@ of Madhya Pradesh. Worked as a Core committee member of the Task Force for Acade
                                     <span>Email</span>
                                 </div>
                                 <p>
-                                    <span>: cs22d003@cse.iitm.ac.in</span>
+                                    <span>: <a href="mailto:cs22d003@cse.iitm.ac.in">cs22d003@cse.iitm.ac.in</a></span>
                                 </p>
                             </div>
                            <div class="contact-item">
                                 <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Mobile Number</span>
+                                    <i class="fas fa-flask"></i>
+                                    <span>Lab</span>
                                 </div>
                                 <p>
-                                    <span>: cs22d003@cse.iitm.ac.in</span>
+                                    <span>: PACE Lab, Dept. of CSE, IIT Madras</span>
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -460,44 +319,44 @@ of Madhya Pradesh. Worked as a Core committee member of the Task Force for Acade
                                     <span>Languages</span>
                                 </div>
                                 <p>
-                                    <span>: Marathi,Hindi,English</span>
+                                    <span>: Marathi, Hindi, English</span>
                                 </p>
                             </div>
                         </div>
                         <div class="contact-icons">
                             <div class="contact-icon">
-                                <a href="www.facebook.com" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
+                                <a href="https://www.linkedin.com/in/kranti-ingale" target="_blank" title="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" target="_blank">
+                                <a href="https://github.com/Kranti-Ingale" target="_blank" title="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="#" target="_blank">
+                                <a href="https://medium.com/@kranti02ingale" target="_blank" title="Medium">
+                                    <i class="fab fa-medium-m"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@KrantiIngale02" target="_blank" title="YouTube">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form action="" class="contact-form">
+                        <form action="https://formsubmit.co/cs22d003@cse.iitm.ac.in" method="POST" class="contact-form">
                             <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME">
-                                <input type="email" required placeholder="YOUR EMAIL">
+                                <input type="text" name="name" required placeholder="YOUR NAME">
+                                <input type="email" name="email" required placeholder="YOUR EMAIL">
                             </div>
                             <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
+                                <input type="text" name="subject" required placeholder="ENTER SUBJECT">
                             </div>
                             <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                                <textarea name="message" cols="15" rows="8" placeholder="Message Here..."></textarea>
                             </div>
                             <div class="submit-btn">
-                                <a href="#" class="main-btn">
-                                    <span class="btn-text">Download CV</span>
-                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
-                                </a>
+                                <button type="submit" class="main-btn" style="border:none; cursor:pointer;">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -512,6 +371,9 @@ of Madhya Pradesh. Worked as a Core committee member of the Task Force for Acade
         </div>
         <div class="control" data-id="about">
             <i class="fas fa-user"></i>
+        </div>
+        <div class="control" data-id="research">
+            <i class="fas fa-flask"></i>
         </div>
         <div class="control" data-id="portfolio">
             <i class="fas fa-briefcase"></i>
