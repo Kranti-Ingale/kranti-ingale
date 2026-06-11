@@ -18,24 +18,32 @@
         .research-card { background-color: var(--color-grey-5); border-radius: 5px; padding: 2.5rem 2rem; transition: all .4s ease-in-out; }
         .research-card:hover { background-color: var(--color-primary); }
         .research-card .r-icon { font-size: 2.6rem; color: var(--color-secondary); margin-bottom: 1rem; }
-        .research-card h4 { font-size: 1.8rem; margin-bottom: .8rem; }
-        .research-card p { font-size: 1.4rem; line-height: 1.7; }
+        .research-card h4 { font-size: 1.3rem; text-transform: uppercase; margin-bottom: .8rem; }
+        .research-card p { font-size: 1.1rem; line-height: 1.7; }
         .pub-list { list-style: none; }
         .pub-item { background-color: var(--color-grey-5); border-left: 4px solid var(--color-secondary); border-radius: 5px; padding: 1.8rem 2rem; margin-bottom: 1.6rem; }
         .pub-item h5 { font-size: 1.7rem; margin-bottom: .6rem; }
         .pub-item .pub-venue { font-size: 1.4rem; color: var(--color-grey-1); }
         .pub-badge { display: inline-block; font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; padding: .3rem 1rem; border-radius: 20px; background-color: var(--color-secondary); color: var(--color-white); margin-left: .6rem; }
         .edu-list { list-style: none; margin-top: 1rem; margin-bottom: 2.5rem; }
-        .edu-list li { font-size: 1.5rem; margin-bottom: 1.6rem; padding-left: 2.6rem; position: relative; }
-        .edu-list li i { position: absolute; left: 0; top: 4px; color: var(--color-secondary); font-size: 1.6rem; }
-        .edu-list li strong { display: block; }
-        .edu-list .edu-meta { display: block; font-size: 1.3rem; color: var(--color-grey-1); margin-top: .3rem; }
+        .edu-list li { font-size: 1.1rem; margin-bottom: 1.6rem; padding-left: 2.4rem; position: relative; }
+        .edu-list li i { position: absolute; left: 0; top: 2px; color: var(--color-secondary); font-size: 1.2rem; }
+        .edu-list li strong { display: block; font-size: 1.1rem; }
+        .edu-list .edu-meta { display: block; font-size: 1.1rem; color: var(--color-grey-1); margin-top: .3rem; }
         /* Education spans full width now that the stat boxes are gone */
         .about-container { grid-template-columns: 1fr; }
         /* Simple skill tags (no percentage bars) */
         .skill-tags { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.5rem; }
-        .skill-tags span { background-color: var(--color-grey-5); padding: .9rem 1.8rem; border-radius: 30px; font-size: 1.4rem; transition: all .3s ease-in-out; }
+        .skill-tags span { background-color: var(--color-grey-5); padding: .9rem 1.8rem; border-radius: 30px; font-size: 1.1rem; transition: all .3s ease-in-out; }
         .skill-tags span:hover { background-color: var(--color-secondary); color: var(--color-white); }
+        /* Blog link buttons side by side */
+        .blog-links { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+        /* Align contact info as a clean 2-column grid (label | value) */
+        .contact-content-con .left-contact .contact-info { display: grid; grid-template-columns: max-content 1fr; column-gap: 1.4rem; row-gap: 1.3rem; align-items: start; }
+        .contact-content-con .left-contact .contact-info .contact-item { display: contents; }
+        .contact-content-con .left-contact .contact-info .contact-item .icon { width: auto; grid-template-columns: 26px max-content; column-gap: .5rem; align-items: start; }
+        .contact-content-con .left-contact .contact-info .contact-item .icon i { font-size: 1.1rem; line-height: 1.4; }
+        .contact-content-con .left-contact .contact-info .contact-item p { margin: 0 !important; line-height: 1.4; }
         .blogs a.blog { text-decoration: none; color: inherit; display: block; }
         /* No hero photo: single-column, centered intro */
         .header-content { grid-template-columns: 1fr; }
@@ -49,7 +57,7 @@
             <div class="right-header">
                 <h1 class="name">
                     Hi, I'm <span>Kranti Ingale</span>
-                    PhD Researcher.
+                    Research Scholar.
                 </h1>
                 <p>
                     I am a Ph.D. scholar in the Department of Computer Science and Engineering at the Indian Institute of Technology Madras (IITM), working under the guidance of <a href="http://www.cse.iitm.ac.in/~madhu/">Dr. Madhu Mutyam</a>.
@@ -175,17 +183,26 @@
                 <h2>My <span>Projects</span><span class="bg-text">My Work</span></h2>
             </div>
             <p class="port-text">
-                A selection of research and course projects in computer architecture, GPU programming, and systems.
+                A few things I've built and shared on GitHub — teaching tools, CUDA material, and security work.
             </p>
+            <div class="btn-con" style="margin-bottom: 3rem;">
+                <a href="https://github.com/Kranti-Ingale" target="_blank" class="main-btn">
+                    <span class="btn-text">Visit my GitHub</span>
+                    <span class="btn-icon"><i class="fab fa-github"></i></span>
+                </a>
+            </div>
             <div class="portfolios">
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port1.jpg" alt="PATCH GPU TLB project">
+                        <img src="img/port1.jpg" alt="VM Visualizer tool">
                     </div>
                     <div class="hover-items">
-                        <h3>PATCH — GPU TLB Hierarchy</h3>
+                        <h3>VM Visualizer — Virtual Memory &amp; Address Translation Simulator</h3>
                         <div class="icons">
-                            <a href="https://github.com/Kranti-Ingale" target="_blank" class="icon">
+                            <a href="https://kranti-ingale.github.io/vm-visualizer/" target="_blank" class="icon" title="Open the tool">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Kranti-Ingale/vm-visualizer" target="_blank" class="icon" title="Source code">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -193,12 +210,12 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port2.jpg" alt="GPUBooker project">
+                        <img src="img/port2.jpg" alt="CUDA Programming material">
                     </div>
                     <div class="hover-items">
-                        <h3>GPUBooker — Parallel Room Booking</h3>
+                        <h3>CUDA Programming — Slides &amp; Assignments</h3>
                         <div class="icons">
-                            <a href="https://github.com/Kranti-Ingale" target="_blank" class="icon">
+                            <a href="https://github.com/Kranti-Ingale/CUDA-Programming" target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -206,25 +223,12 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="img/port3.jpg" alt="DataPulse LLC prefetcher project">
+                        <img src="img/port3.jpg" alt="Cyber Security project">
                     </div>
                     <div class="hover-items">
-                        <h3>DataPulse — LLC Prefetcher (ChampSim)</h3>
+                        <h3>Cyber Security</h3>
                         <div class="icons">
-                            <a href="https://github.com/Kranti-Ingale" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port4.jpg" alt="Dyslexia word highlighting project">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Dyslexia Reading Aid (M.Tech, IIT KGP)</h3>
-                        <div class="icons">
-                            <a href="https://github.com/Kranti-Ingale" target="_blank" class="icon">
+                            <a href="https://github.com/Kranti-Ingale/CyberSecurity" target="_blank" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -238,41 +242,16 @@
                     <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
                 </div>
                 <p class="port-text">
-                    I write about GPU architecture, computer-systems research, and GATE preparation. Read my articles on Medium and watch my talks on YouTube.
+                    I write articles on Medium and share talks on YouTube about GPU architecture, computer systems, and GATE preparation.
                 </p>
-                <div class="btn-con" style="margin-bottom: 3rem;">
+                <div class="btn-con blog-links">
                     <a href="https://medium.com/@kranti02ingale" target="_blank" class="main-btn">
-                        <span class="btn-text">Read on Medium</span>
+                        <span class="btn-text">Medium</span>
                         <span class="btn-icon"><i class="fab fa-medium-m"></i></span>
                     </a>
-                </div>
-                <div class="blogs">
-                    <a href="https://medium.com/@kranti02ingale" target="_blank" class="blog">
-                        <img src="img/blog1.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>Articles on GPU &amp; Computer Architecture</h4>
-                            <p>
-                                Notes and explainers on GPU memory systems, address translation, and architecture research. Read the full collection on Medium.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="https://www.youtube.com/@KrantiIngale02" target="_blank" class="blog">
-                        <img src="img/blog2.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>Let's Crack the GATE — Talks</h4>
-                            <p>
-                                11+ keynote sessions on GATE preparation delivered across engineering colleges. Watch the recordings on my YouTube channel.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="https://medium.com/@kranti02ingale" target="_blank" class="blog">
-                        <img src="img/blog3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>Research &amp; PhD Life</h4>
-                            <p>
-                                Reflections on doing a PhD, working with simulators, and the research process. More posts coming soon.
-                            </p>
-                        </div>
+                    <a href="https://www.youtube.com/@KrantiIngale02" target="_blank" class="main-btn">
+                        <span class="btn-text">YouTube</span>
+                        <span class="btn-icon"><i class="fab fa-youtube"></i></span>
                     </a>
                 </div>
             </div>
